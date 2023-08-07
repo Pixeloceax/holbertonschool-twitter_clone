@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:twitter/widgets/side_bar_menu.dart';
+import 'package:twitter/widgets/bar_menu.dart';
+import 'package:twitter/widgets/post_widget.dart';
+import 'package:twitter/assets/DummyData.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({Key? key}) : super(key: key);
-
-  static const routeName = '/home';
 
   @override
   Widget build(BuildContext context) {
@@ -32,7 +33,16 @@ class HomeScreen extends StatelessWidget {
         ),
         centerTitle: true,
       ),
+      // body: PostWidget(
+      //   name: userList[0]['name'],
+      //   username: userList[0]['username'],
+      //   imgUrl: userList[0]['imgUrl'],
+      //   isVerified: userList[0]['isVerified'],
+      //   content:
+      //       "llkjqdlkfjlqkdjfmlqjdmlkjfdlsqjflqjdfljqmldfjlmsdqkjfmlqkjfdlkjdsqlfisjflrsufjqljrliqjfoidqjlfjqdlfjlkqdjfmlkqjdflkqoirfoirsj",
+      // ),
       backgroundColor: Colors.grey[100],
+      bottomSheet: BarMenu(),
     );
   }
 }
